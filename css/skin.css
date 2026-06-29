@@ -558,6 +558,27 @@ a.site-logo img {
     opacity: 1;
 }
 
+/* Third hero bubble: smaller accent circle, top-left, floats above */
+.hero-images .third-image {
+    position: absolute;
+    top: 14px;
+    left: 4px;
+    width: 190px;
+    height: 190px;
+    z-index: 3;
+    border: 5px solid #fff;
+    box-shadow: 0 18px 44px rgba(0, 0, 0, 0.18);
+    opacity: 0;
+    transform: scale(0.85);
+    transition: all 1.2s;
+    transition-delay: 1.6s;
+}
+
+.show .hero-images .third-image {
+    opacity: 1;
+    transform: scale(1);
+}
+
 .hero-content {
     position: absolute;
     top: 50%;
@@ -3455,6 +3476,7 @@ h3.card-title.h5 {
         left: 0;
         top: auto;
         display: flex;
+        flex-wrap: wrap;
         height: auto;
         margin-bottom: 35px;
     }
@@ -3473,9 +3495,20 @@ h3.card-title.h5 {
     }
 
     .hero-images .fist-image,
-    .hero-images .sec-image {
+    .hero-images .sec-image,
+    .hero-images .third-image {
         position: relative;
         margin-right: 28px;
+    }
+
+    /* Third bubble joins the inline row on tablet/mobile */
+    .hero-images .third-image {
+        top: auto;
+        left: auto;
+        width: 200px;
+        height: 200px;
+        border: none;
+        box-shadow: none;
     }
 
     .col-1 {
@@ -3755,12 +3788,18 @@ h3.card-title.h5 {
         font-size: 28px;
     }
 
+    .hero-images .third-image {
+        width: 160px;
+        height: 160px;
+    }
+
     .hero-images .fist-image,
-    .hero-images .sec-image {
+    .hero-images .sec-image,
+    .hero-images .third-image {
         margin-right: 21px;
     }
 
-    .hero-images .sec-image {
+    .hero-images .third-image {
         margin-right: 0;
     }
 

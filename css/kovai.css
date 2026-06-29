@@ -839,10 +839,10 @@ html { overflow-x: hidden; }
     /* Stat cards: always single column so big numbers never clip */
     .kc-stats { grid-template-columns: 1fr !important; }
     .kc-stat .num { font-size: 42px; }
-    /* Hero buttons stack full-width instead of cramming side by side */
-    .kc-hero-cta { flex-direction: column; align-items: stretch; gap: 12px; }
-    .kc-hero-cta .site-btn { text-align: center; }
-    .kc-hero-cta .link-btn { text-align: center; }
+    /* Hero buttons stack and left-align on phones */
+    .kc-hero-cta { flex-direction: column; align-items: flex-start; gap: 12px; }
+    .kc-hero-cta .site-btn { text-align: left; }
+    .kc-hero-cta .link-btn { text-align: left; }
     /* Tighter section padding on small screens */
     .kc-hero h1 { font-size: 34px; }
 }
