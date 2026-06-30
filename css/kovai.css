@@ -23,15 +23,21 @@
     --kc-shadow-crimson: 0 26px 60px rgba(226, 29, 38, 0.34);
 }
 
-/* ---------- Logo: contained red badge ---------- */
+/* ---------- Logo: contained red badge (red bg is part of the logo) ---------- */
+a.site-logo {
+    display: inline-flex;
+    align-items: center;
+    line-height: 0;
+}
 a.site-logo img {
     width: auto !important;
-    height: 64px;
-    border-radius: 11px;
+    height: 62px;
+    border-radius: 12px;
     display: block;
+    object-fit: contain;
     box-shadow: 0 8px 22px rgba(226, 29, 38, 0.22);
 }
-@media (max-width: 768px) { a.site-logo img { height: 50px; } }
+@media (max-width: 768px) { a.site-logo img { height: 48px; border-radius: 10px; } }
 
 /* ---------- typography (Poppins) ---------- */
 html, body, button, input, select, textarea, p, a, li, span, div,
@@ -457,19 +463,22 @@ p.sub-heading, p.sub-heading span,
    ============================================================ */
 .kc-clients {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 18px;
     margin-top: 40px;
 }
 .kc-client {
     height: 92px;
     border-radius: 16px;
+    padding: 0 22px;
+    text-align: center;
+    line-height: 1.3;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 700;
     font-size: 16px;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.04em;
     color: var(--kc-muted);
     background: var(--kc-glass);
     border: 1px solid rgba(255, 255, 255, 0.8);
@@ -521,7 +530,11 @@ p.sub-heading, p.sub-heading span,
 }
 .kc-info-item .ico img { filter: brightness(0) invert(1); }
 .kc-info-item p { margin: 0; color: #fff; }
+.kc-info-item p a { color: inherit; text-decoration: none; word-break: break-word; }
+.kc-info-item p a:hover { text-decoration: underline; }
 .kc-info-item strong { display: block; font-size: 13px; font-weight: 500; opacity: 0.7; margin-bottom: 2px; letter-spacing: 0.04em; }
+footer#footer .ftr-contact p a { color: inherit; text-decoration: none; word-break: break-word; }
+footer#footer .ftr-contact p a:hover { color: var(--kc-crimson); }
 
 .kc-form {
     background: #ffffff;
@@ -694,7 +707,8 @@ footer#footer { padding: 0 !important; background: #f7f7f9; }
     padding: 56px 0 42px;
 }
 .kc-foot-brand .kc-foot-logo {
-    height: 56px; width: auto; border-radius: 10px; margin-bottom: 18px;
+    height: 60px; width: auto; border-radius: 12px; margin-bottom: 18px;
+    object-fit: contain; display: block;
     box-shadow: 0 8px 20px rgba(226, 29, 38, 0.18);
 }
 .kc-foot-brand p { color: var(--kc-muted); font-size: 15px; max-width: 330px; margin-bottom: 20px; line-height: 1.6; }
