@@ -348,4 +348,36 @@ if (_heroAnchor) setTimeout(() => _heroAnchor.classList.add('show'), 2000);
 })();
 
 
+// ============ TESTIMONIAL SWIPER ============
+(function () {
+	const swiperEl = document.querySelector('.kc-testimonial-swiper');
+	if (!swiperEl || typeof Swiper === 'undefined') return;
 
+	new Swiper('.kc-testimonial-swiper', {
+		slidesPerView: 1,
+		spaceBetween: 28,
+		loop: true,
+		speed: 700,
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: false,
+			pauseOnMouseEnter: true,
+		},
+		pagination: {
+			el: '.kc-testi-pagination',
+			clickable: true,
+		},
+		navigation: {
+			nextEl: '.kc-testi-next',
+			prevEl: '.kc-testi-prev',
+		},
+		breakpoints: {
+			720:  { slidesPerView: 2, spaceBetween: 24 },
+			1100: { slidesPerView: 3, spaceBetween: 28 },
+		},
+		a11y: {
+			prevSlideMessage: 'Previous testimonial',
+			nextSlideMessage: 'Next testimonial',
+		},
+	});
+})();
