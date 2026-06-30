@@ -356,6 +356,7 @@ if (_heroAnchor) setTimeout(() => _heroAnchor.classList.add('show'), 2000);
 	new Swiper('.kc-testimonial-swiper', {
 		slidesPerView: 1,
 		spaceBetween: 28,
+		centeredSlides: true,
 		loop: true,
 		speed: 700,
 		autoplay: {
