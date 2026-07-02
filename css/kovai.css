@@ -32,16 +32,22 @@ a.site-logo {
 
 a.site-logo img {
     width: auto !important;
-    height: 62px;
+    height: 84px;
     border-radius: 12px;
     display: block;
     object-fit: contain;
     box-shadow: 0 8px 22px rgba(226, 29, 38, 0.22);
 }
 
+@media (max-width: 991px) {
+    a.site-logo img {
+        height: 74px;
+    }
+}
+
 @media (max-width: 768px) {
     a.site-logo img {
-        height: 48px;
+        height: 64px;
         border-radius: 10px;
     }
 }
